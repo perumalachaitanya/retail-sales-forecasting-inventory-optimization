@@ -1,12 +1,10 @@
-# 🛒 Retail Sales Forecasting & Inventory Optimization System
+# 📊 Retail Sales Forecasting & Inventory Optimization System
 
----
+## 🚀 Project Overview
 
-## 📌 Project Overview
+This project is an end-to-end Retail Analytics solution that forecasts product-level demand and optimizes inventory decisions using Machine Learning.
 
-This project focuses on building an end-to-end **Retail Analytics System** that predicts future sales and optimizes inventory decisions using Machine Learning.
-
-The system simulates a real-world retail environment by forecasting demand and generating actionable insights such as **Safety Stock** and **Reorder Point**, helping businesses reduce stockouts and improve efficiency.
+It simulates how real-world retail companies manage stock efficiently to reduce stockouts and overstock situations.
 
 ---
 
@@ -14,92 +12,74 @@ The system simulates a real-world retail environment by forecasting demand and g
 
 Retail businesses often face:
 
-* Overstocking → Increased holding costs 💸
-* Stockouts → Lost sales & unhappy customers 😡
+* ❌ Stockouts → Lost sales
+* ❌ Overstock → Increased holding costs
 
 This project solves these problems by:
 
-✔ Predicting future sales
-✔ Optimizing inventory levels
-✔ Providing reorder recommendations
+* Predicting future sales demand 📈
+* Calculating optimal inventory levels 📦
+* Providing reorder recommendations ⚠️
 
 ---
 
-## 🏭 Industry Relevance
+## 🏢 Industry Relevance
 
-Companies like Amazon, Walmart, Flipkart, and Reliance Retail use similar systems to:
+Modern retail companies like Amazon, Flipkart, and Reliance Retail use similar systems for:
 
-* Improve demand forecasting
-* Reduce inventory costs
-* Enhance supply chain efficiency
+* Demand forecasting
+* Supply chain optimization
+* Inventory planning
 
 ---
 
-## 💼 Business Value
+## 💡 Business Value
 
-* 📉 Reduces stockouts
-* 📦 Optimizes inventory levels
-* 💰 Improves profit margins
-* 📊 Enables data-driven decision making
+* Increase revenue by reducing stockouts
+* Reduce inventory holding costs
+* Improve supply chain efficiency
+* Data-driven decision making
 
 ---
 
 ## 🛠️ Tech Stack
 
 * Python 🐍
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
+* Pandas & NumPy
+* Scikit-learn (Random Forest)
+* Matplotlib / Streamlit
+* Joblib
 
 ---
 
 ## 🏗️ Project Architecture
 
-```
-Raw Data → Data Cleaning → Feature Engineering → Model Training → Forecasting → Inventory Optimization → Outputs
-```
+Data → Preprocessing → Feature Engineering → ML Model → Forecast → Inventory Optimization → Dashboard
 
 ---
 
 ## 📂 Folder Structure
 
-```
 Retail-Sales-Forecasting/
 │
-├── data/
-│   └── retail_data.csv
-│
-├── src/
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── model.py
-│   ├── inventory.py
-│
-├── outputs/
-│   ├── forecast.csv
-│   ├── inventory.csv
-│
-├── images/
-│   ├── sales_trend.png
-│   ├── forecast_vs_actual.png
-│
-├── main.py
-├── requirements.txt
+├── data/                # Dataset
+├── src/                 # Core modules
+├── models/              # Trained model
+├── app/                 # Streamlit dashboard
+├── images/              # Screenshots
+├── main.py              # Main pipeline
+├── requirements.txt     # Dependencies
 └── README.md
-```
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Installation
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/yourusername/repo-name.git
 cd Retail-Sales-Forecasting
-
 python -m venv venv
-venv\Scripts\activate   # Windows
-
+venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -107,73 +87,83 @@ pip install -r requirements.txt
 
 ## ▶️ How to Run
 
+### Run Main Pipeline
+
 ```bash
 python main.py
 ```
 
+### Run Dashboard
+
+```bash
+streamlit run app/app.py
+```
+
 ---
 
-## 📊 Simulation Workflow
+## 🔄 Simulation Workflow
 
 1. Generate synthetic retail dataset
-2. Perform data cleaning and preprocessing
-3. Create features for modeling
-4. Train Machine Learning model
-5. Predict future sales
-6. Calculate inventory metrics
-7. Generate outputs and visualizations
+2. Perform feature engineering
+3. Train ML model
+4. Forecast demand
+5. Calculate inventory metrics
+6. Display results in dashboard
 
 ---
 
-## 📈 Results
+## 📊 Results
+
+* Accurate demand forecasting
+* Inventory recommendations per product
+* Reorder alerts based on stock levels
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard](images/dashboard.png)
+
+### Forecast Graph
+
+![Forecast](images/forecast.png)
+
+### Inventory Output
+
+![Inventory](images/inventory.png)
 
 ### 📊 Sales Trend
 
-![Sales Trend](images/sales_trend.png)
-
----
+![SalesTrend](images/sales_trend.png)
 
 ### 📉 Forecast vs Actual
 
-![Forecast](images/forecast_vs_actual.png)
-
----
-
-## 📦 Output Files
-
-* `forecast.csv` → Actual vs Predicted Sales
-* `inventory.csv` → Safety Stock & Reorder Point
-
----
-
-## 🚀 Key Features
-
-✔ Sales Forecasting using Machine Learning
-✔ Inventory Optimization Logic
-✔ Safety Stock Calculation
-✔ Reorder Point Calculation
-✔ Data Visualization
-
+![Forecast_vs_Actuual](images/forecast_vs_actual.png)
 ---
 
 ## 🔮 Future Improvements
 
-* Multi-product forecasting
-* Store-level predictions
-* Real-time dashboard (Streamlit)
-* Advanced models (XGBoost, LSTM)
+* Multi-store expansion
+* Real-time forecasting
+* Price & promotion impact modeling
+* API deployment
 
 ---
 
-## 📚 Learning Outcomes
+## 🎓 Learning Outcomes
 
-* Time Series Forecasting
-* Feature Engineering
-* Inventory Optimization
-* Real-world Data Science Workflow
-* GitHub Project Structuring
+* Time series forecasting
+* Feature engineering
+* Inventory optimization logic
+* End-to-end ML pipeline
+* Streamlit dashboard development
 
 ---
+
+⭐ If you like this project, give it a star!
+
 
 ## 👨‍💻 Author
 
