@@ -1,22 +1,25 @@
 import pandas as pd
 import numpy as np
 
-dates = pd.date_range(start='2023-01-01', periods=365)
+np.random.seed(42)
 
-sales = np.random.poisson(lam=20, size=365)
+dates = pd.date_range(start="2023-01-01", periods=365)
 
-# Add trend + seasonality
-trend = np.linspace(0, 10, 365)
-seasonality = 5 * np.sin(np.linspace(0, 20, 365))
+data = []
 
-sales = sales + trend + seasonality
-sales = sales.astype(int)
+stores = [1, 2]
+items = [101, 102, 103]  # 3 products
 
-df = pd.DataFrame({
-    'date': dates,
-    'sales': sales
-})
+for store in stores:
+    for item in items:
+        base = np.random.randint(20, 50)
+        for date in dates:
+            demand = base + np.random.randint(-10, 10)
+            demand = max(0, demand)
 
-df.to_csv('data/retail_data.csv', index=False)
+            data.append([store, item, date, demand])
 
+df = pd.DataFrame(data, columns=["store_id", "item_id", "date", "qty_sold"])
+
+df.to_csv("data/retail_data.csv", index=False)
 print("Dataset created!")
